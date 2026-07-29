@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Registration Form</h1>
+    <form  method="post" >
+        <p>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </p>
+
+        <p>
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastname" name="lastname" required>
+        </p>
+
+        <p>
+            <label for="fathername">Father Name:</label>
+            <input type="text" id="fathername" name="fathername" required>
+        </p>
+
+        <p>
+            <label for="mothername">Mother Name:</label>
+            <input type="text" id="mothername" name="mothername" required>
+        </p>
+
+        <p>
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+        </p>
+
+        <p>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </p>
+
+        <p>
+            Gender:
+            <label><input type="radio" name="gender" value="male" required> Male</label>
+            <label><input type="radio" name="gender" value="female"> Female</label>
+            
+        </p>
+
+        <p>
+            <label for="course">Choose Course:</label>
+            <select id="course" name="course" required>
+                <option value="">Select Course</option>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="javascript">JavaScript</option>
+            </select>
+        </p>
+
+        <p>
+            Hobbies:
+            
+            <label><input type="checkbox" name="hobbies" value="Singing"> Singing</label>
+            <label><input type="checkbox" name="hobbies" value="dancing"> Dancing</label>
+            <label><input type="checkbox" name="hobbies" value="Reading book"> Reading Books</label>
+            <label><input type="checkbox" name="hobbies" value="Playing Cricket"> Playing Cricket</label>
+        </p>
+
+        <p>
+            <label for="address">Address:</label><br>
+            <textarea id="address" name="address" rows="4" cols="10" required></textarea>
+        </p>
+
+        <p>
+            <label for="photo">Photo:</label>
+            <input type="file" id="photo" name="photo" accept="image/*" required>
+        </p>
+
+        <p>
+            <input type="submit" value="Submit">
+        </p>
+    </form>
+</body>
+</html>
