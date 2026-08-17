@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Fetch</title>
+
+    <style>
+        table {
+            width: 80vw;
+            border-collapse: collapse;
+            margin: auto;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .button {
+            color: white;
+            background-color: blue;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .top-btn {
+            display: block;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>List of Products</h1>
+    <button class="top-btn">Shop Now</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Sr.No.</th>
+                <th>Title</th>
+                <th>Image</th>
+                <th>Category</th>
+                <th>Rating</th>
+                <th>Price (INR)</th>
+                <th>Stock</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        const PRODUCT_URL =
+            "https://dummyjson.com/products?limit=50&skip=6";
+
+        async function getRate() {
+            try {
+                const res = await fetch(
+                    "https://open.er-api.com/v6/latest/USD"
+                );
+                const data = await res.json();
+
+                console.log("INR Rate =", data.rates.INR);
+                return data.rates.INR;
+            }
+            catch (err) {
+                console.log("Error:", err);
+                return 83; // fallback rate
+            }
+        }
+
+        async function loadProducts() {
+            try {
+                const rate = await getRate();
+
+                const res = await fetch(PRODUCT_URL);
+                const data = await res.json();
+
+                let rows = "";
+
+                data.products.forEach((item, index) => {
+                    rows += `
+                    <tr>
+                        <td>${index + 1}</td>
+                        <td>${item.title}</td>
+                        <td>
+                            <img src="${item.thumbnail}"
+                                 width="50"
+                                 height="50"
+                                 alt="${item.title}">
+                        </td>
+                        <td>${item.category}</td>
+                        <td>${item.rating}</td>
+                        <td>₹ ${(item.price * rate).toFixed(2)}</td>
+                        <td>${item.stock}</td>
+                        <td>
+                            <button class="button">
+                                Buy Now
+                            </button>
+                        </td>
+                    </tr>`;
+                });
+
+                document.querySelector("tbody").innerHTML = rows;
+            }
+            catch (err) {
+                console.log("Error:", err);
+            }
+        }
+
+        loadProducts();
+    </script>
+
+</body>
+</html>

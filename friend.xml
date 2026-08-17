@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<friends>
+    <friend>
+        <id>1</id>
+        <name>Alice Johnson</name>
+        <age>22</age>
+        <gender>Female</gender>
+        <email>alice@example.com</email>
+        <phone>9876543210</phone>
+        <city>Delhi</city>
+    </friend>
+
+    <friend>
+        <id>2</id>
+        <name>Rahul Sharma</name>
+        <age>21</age>
+        <gender>Male</gender>
+        <email>rahul@example.com</email>
+        <phone>9876501234</phone>
+        <city>Noida</city>
+    </friend>
+
+    <friend>
+        <id>3</id>
+        <name>Priya Singh</name>
+        <age>23</age>
+        <gender>Female</gender>
+        <email>priya@example.com</email>
+        <phone>9876512345</phone>
+        <city>Ghaziabad</city>
+    </friend>
+
+    <friend>
+        <id>4</id>
+        <name>Aman Verma</name>
+        <age>22</age>
+        <gender>Male</gender>
+        <email>aman@example.com</email>
+        <phone>9876523456</phone>
+        <city>Lucknow</city>
+    </friend>
+
+    <friend>
+        <id>5</id>
+        <name>Neha Gupta</name>
+        <age>21</age>
+        <gender>Female</gender>
+        <email>neha@example.com</email>
+        <phone>9876534567</phone>
+        <city>Kanpur</city>
+    </friend>
+</friends>

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<student roll_no="101">
-    <name>John Doe</name>
-    <age>20</age>
-    <course>Bachelor of Science</course>
-    <year>2</year>
-</student>
