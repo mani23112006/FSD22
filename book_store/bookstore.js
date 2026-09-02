@@ -29,6 +29,5 @@ const books = [
     { img: "images/book2.png", price: 400 },
     { img: "images/book3.png", price: 299 }
 ];
-
 books.forEach(book => createBookElement(book.img, book.price));
 
