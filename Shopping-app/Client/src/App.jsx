@@ -10,7 +10,7 @@ function App(){
       <Route path="/" element={<UserLayout/>}/>
       <Route index element={<UserLayout/>}/>
       <Route path="*" element={Error}/>
-      
+      <Route path="/stopwatch" element={<Stopwatch/>}/>
       </Routes>
       
     </BrowserRouter>

@@ -146,3 +146,37 @@
     gap: 12px 20px;
   }
 }
+
+.stopwatch{
+  width: 100px;
+  white-space: nowrap;/*to write in one line*/
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #000;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.stopwatch:hover {
+  background-color: #444;
+}
+.btn{
+  width: 100px;
+  white-space: nowrap;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #000;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.btn:hover {
+  background-color: #444;
+}
